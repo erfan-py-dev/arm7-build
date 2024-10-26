@@ -1,5 +1,5 @@
 # Dockerfile for ARM7L
-FROM arm32v7/python:3.9 
+FROM arm32v7/python:3.11 
 
 # Install essential build dependencies
 RUN apt-get update && apt-get install -y \
@@ -14,8 +14,7 @@ RUN pip install --upgrade pip
 # Install numpy separately before opencv
 RUN pip install numpy
 
-# Install OpenCV (use opencv-python-headless if you don’t need GUI features)
-RUN pip install --no-cache-dir opencv-python-headless
+RUN pip install --no-cache-dir opencv-python
 
 # Set working directory
 WORKDIR /app
