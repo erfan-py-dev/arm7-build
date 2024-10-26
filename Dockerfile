@@ -1,5 +1,5 @@
 # Dockerfile for ARM7L
-FROM arm32v7/python:3.9  # Select Python version (adjust as needed)
+FROM arm32v7/python:3.9
 
 # Install any dependencies
 RUN apt-get update && apt-get install -y \
